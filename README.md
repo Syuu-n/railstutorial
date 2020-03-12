@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails Tutorial の再入門用リポジトリ
 
-Things you may want to cover:
+- Rails Tutorial
+https://railstutorial.jp/
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Docker Rails
+https://docs.docker.com/compose/rails/
