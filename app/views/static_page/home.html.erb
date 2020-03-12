@@ -1,4 +1,13 @@
 <% provide(:title, "Home")%>
-<h1>StaticPage#home</h1>
-<p>Find me in app/views/static_page/home.html.erb</p>
-<p>OHAYOUGOZAIMASU!</p>
+
+<div class='center jumbotron'>
+  <h1>ようこそ！</h1>
+
+  <h2>Rails チュートリアルは
+    <a href='https://railstutorial.jp/'>こちら</a>
+  </h2>
+
+  <%= link_to 'サインアップ', '#', class: 'btn btn-lg btn-primary'%>
+</div>
+
+<%= link_to image_tag("rails.png", alt: 'Rails Logo'), 'http://rubyonrails.org/'%>
