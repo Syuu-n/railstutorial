@@ -36,3 +36,6 @@ Rails Tutorial の再入門用リポジトリ
     * 6.13, 6.14 User オブジェクトと Rails console
     * 6.2 Validation
     * 6.3 パスワード
+    * 7.1 User CRUD
+    * 7,2 登録フォーム
+    *
