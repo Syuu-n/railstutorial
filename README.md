@@ -31,5 +31,8 @@ Rails Tutorial の再入門用リポジトリ
     * 3.3 テスト（必要であれば）
     * 4.x Ruby 文法（必要であれば）
     * 5.1 CSS と Bootstrap
-    * 6.1 User CRUD
-    *
+    * 6.1.1 MIgration
+    * 6.1.2 Model
+    * 6.13, 6.14 User オブジェクトと Rails console
+    * 6.2 Validation
+    * 6.3 パスワード
