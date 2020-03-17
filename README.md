@@ -23,6 +23,10 @@ Rails Tutorial の再入門用リポジトリ
     * 生成する全てのフォームにと Ajax リクエストにセキュリティトークンが含まれるようになる
     * https://qiita.com/munaita_/items/0739965bcb31bf430e47
 * ar_internal_metadata と schema_migrations は Rails 5 で追加された DB 誤削除防止機能
+* 8.2 でjQuery を追加時にエラー
+    * gem 'jquery-rails'
+    * gem 'jquery-ui-rails'
+    * 上記を追加して bundle install
 * 必要そうな項目
     * 1.3 MVC
     * 1.4 Hello World!
@@ -37,5 +41,7 @@ Rails Tutorial の再入門用リポジトリ
     * 6.2 Validation
     * 6.3 パスワード
     * 7.1 User CRUD
-    * 7,2 登録フォーム
-    *
+    * 7.2 登録フォーム
+    * 8.1 ユーザ認証
+    * 8.2 ログイン
+    * 8.3 ログアウト
