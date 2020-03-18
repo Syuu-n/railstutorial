@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  attr_accessor :remember_token
   # 保存前に email を小文字に変換
   before_save { self.email = email.downcase }
 
@@ -10,4 +11,29 @@ class User < ApplicationRecord
 
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
+
+  def remember
+    self.remember_token = User.new_token
+    update_attribute(:remember_digest, User.digest(remember_token))
+  end
+
+  def authenticated?(remember_token)
+    return false if remember_digest.nil?
+    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  end
+
+  def forgot
+    update_attribute(:remember_digest, nil)
+  end
+
+  class << self
+    def digest(string)
+      cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
+      BCrypt::Password.create(string, cost: cost)
+    end
+
+    def new_token
+      SecureRandom.urlsafe_base64
+    end
+  end
 end
