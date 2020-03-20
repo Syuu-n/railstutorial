@@ -3,6 +3,7 @@
 Rails Tutorial の再入門用リポジトリ
 
 # Docker 上で Rails をインストールする
+* https://docs.docker.com/compose/rails/
 * rails new の時に mysql を指定する
     * docker-compose run web rails new . --force --no-deps —database=mysql
     * 参考：https://qiita.com/reeenapi/items/9fc38c4f2f8186c78288
