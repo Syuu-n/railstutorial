@@ -31,7 +31,7 @@ Rails Tutorial の再入門用リポジトリ
 * 10.3.2 で faker を bundle install 時にエラー
     * Bundler could not find compatible versions for gem "i18n":
     * faker は i18n と依存関係にあり、それぞれのバージョンの相性が良くないために起こる
-    * faker のバージョンを新しくする（gem 'faker', '1.9.1’）もしくは bundle install で解決
+    * faker のバージョンを新しくする（gem 'faker', '1.9.1’）もしくは bundle update で解決
     * https://teratail.com/questions/199869
 * 10.3.3 で will_paginate を view に書くとエラー
     * wrong number of arguments (given 0, expected 1)
