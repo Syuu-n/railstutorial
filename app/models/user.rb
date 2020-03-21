@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   attr_accessor :remember_token, :activation_token
   # 保存前に email を小文字に変換
-  before_save downcase_email
+  before_save :downcase_email
   before_create :create_activation_digest
 
   validates :name, presence: true, length: { maximum: 50 }

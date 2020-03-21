@@ -2,7 +2,9 @@ User.create!(name: "Kato",
              email: 'kato@email.com',
              password: 'password',
              password_confirmation: 'password',
-             admin: true
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now
 )
 
 99.times do |n|
@@ -11,6 +13,8 @@ User.create!(name: "Kato",
   password = 'password'
   User.create!(name: name,
                email: email,
-               password: password
+               password: password,
+               activated: true,
+               activated_at: Time.zone.now
   )
 end
