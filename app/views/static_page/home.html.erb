@@ -1,13 +1,30 @@
-<% provide(:title, "Home")%>
+<% provide(:title, "ホーム")%>
 
-<div class='center jumbotron'>
-  <h1>ようこそ！</h1>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3>タイムライン</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+  <div class='center jumbotron'>
+    <h1>ようこそ！</h1>
 
-  <h2>Rails チュートリアルは
-    <a href='https://railstutorial.jp/'>こちら</a>
-  </h2>
+    <h2>Rails チュートリアルは
+      <a href='https://railstutorial.jp/'>こちら</a>
+    </h2>
 
-  <%= link_to 'サインアップ', signup_path, class: 'btn btn-lg btn-primary'%>
-</div>
+    <%= link_to 'サインアップ', signup_path, class: 'btn btn-lg btn-primary'%>
+  </div>
 
-<%= link_to image_tag("rails.png", alt: 'Rails Logo'), 'http://rubyonrails.org/'%>
+  <%= link_to image_tag("rails.png", alt: 'Rails Logo'), 'http://rubyonrails.org/'%>
+<% end %>
